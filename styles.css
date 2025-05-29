@@ -1,3 +1,8 @@
+html, body {
+  overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -12,6 +17,7 @@ body {
   align-items: center;
   padding: 10px 5%;
   border-bottom: 1px solid #3d5a80;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -24,6 +30,7 @@ body {
   color: white;
   font-size: 0.8rem;
   text-align: left;
+  flex-wrap: wrap;
 }
 
 .contact-info div i {
@@ -40,7 +47,9 @@ nav {
 
 nav ul {
   list-style: none;
+  justify-content: center;
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   margin: 0;
   padding: 0;
@@ -60,8 +69,51 @@ nav ul li a:hover {
   border-radius: 4px;
 }
 
+.menu-toggle {
+  display: none;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  nav {
+    position: relative;
+  }
+
+  .menu-toggle {
+    display: block;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem;
+    cursor: pointer;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 110%;
+  }
+
+  nav ul.open {
+    display: flex;
+  }
+
+}
+
 main {
-  background: url('/images/home1.png') no-repeat center center/cover;
+  background: url('/iccs_website/images/home1.png') no-repeat center center/cover;
   padding: 40px 5%;
 }
 

@@ -1,0 +1,628 @@
+html, body {
+  overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+header {
+  background-color: #000;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #222;
+
+  top: 0;
+  z-index: 1000;
+}
+
+.logo-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+header img {
+  height: 120px;
+  margin-right: 2rem;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #74baff;
+  font-weight: 500;
+  font-size: 14px;
+  transition: 0.3s ease;
+  text-transform: uppercase;
+}
+
+nav a:hover {
+  color: #ffffff;
+}
+
+.hero {
+  background: url('/iccs_website/images/service\ banner.png') no-repeat center center/cover;
+  height: 750px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+}
+
+.hero h2 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #66ccff;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-decoration-color: #1669bc;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+.hero a.button {
+  padding: 0.8rem 1.8rem;
+  background-color: transparent;
+  border: 2px solid #ff4500; 
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: 0.3s ease;
+}
+
+.hero a.button:hover {
+  background-color: #d55121cb;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  nav {
+    margin-top: 1rem;
+    justify-content: center;
+  }
+
+  .logo-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header img {
+    margin-bottom: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero h2 {
+    font-size: 14px;
+  }
+}
+
+
+
+
+.section-black {
+  background-color: #000;
+  text-align: center;
+  color: #fff;
+  padding-top: 25px;
+  border-top: 2px solid #c1c5c9;
+  border-bottom: 2px solid #c1c5c9;
+}
+
+.small-heading {
+  font-size: 12px;
+  color: #3cb0ff; 
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  
+}
+
+.main-heading {
+  font-size: 32px;
+  font-weight: bold;
+  
+}
+
+.description {
+  font-size: 16px;
+  max-width: 800px;
+  margin: auto;
+  color: #fff;
+  padding-bottom: 25px;
+  padding: 10px;
+}
+
+
+
+
+.risk-section {
+  background-image: url('/iccs_website/images/parabolic-rectangle.png');
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px;
+  color: white;
+  position: relative;
+}
+
+.risk-section-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 60px 20px;
+  border-radius: 8px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.risk-heading {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
+  color: #fff;
+}
+
+.risk-heading::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 2px;
+  margin: 0 auto;
+  background-color: #e84923; 
+}
+
+.risk-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.risk-card {
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: 20px;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+@media  (max-width: 786px) {
+    .risk-card {
+        width: 80%;
+    }
+}
+
+.risk-card:hover {
+  transform: translateY(-5px);
+}
+
+.risk-card h3 {
+  color: #66ccff;
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+}
+
+.risk-card p {
+  font-size: 0.95rem;
+  color: #fff;
+  line-height: 1.6;
+}
+
+
+
+
+.services-header {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #2c3e5086;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.services-header h2 {
+    color: #74c1f4;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.services-header h1 {
+    color: white;
+    font-size: 32px;
+    text-transform: uppercase;
+}
+
+.services-header .border-line {
+    width: 240px;
+    height: 2px;
+    background-color: #ff4500; 
+}
+
+@media (max-width: 768px) {
+.services-header h1 {
+    font-size: 26px;
+    }
+.services-header h2 {
+    font-size: 16px;
+    }
+.services-header .border-line {
+    width: 100px;
+    }
+}
+
+.carousel-inner {
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel-item {
+    position: relative;
+    text-align: center;
+    color: white; 
+    height: 400px; 
+    margin-bottom: 50px;
+
+}
+
+@media (max-width: 768px) {
+
+    .carousel-item {
+    position: relative;
+    text-align: center;
+    color: white; 
+    min-height: 650px;
+
+}
+}
+
+.carousel-item h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.carousel-item ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.carousel-item ul li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.carousel-item ul li::before {
+    content: "~";
+    font-size: 18px;
+    color: #66ccff;
+    position: absolute;
+    left: 0;
+}
+
+.carousel-control-prev, 
+.carousel-control-next {
+    background-color: #2c3e5006; 
+    width: 0;
+}
+
+.carousel-indicators button {
+    background-color: white; 
+    width: 12px;
+    height: 12px;
+}
+
+.carousel-indicators .active {
+    background-color: #66ccff; 
+}
+
+
+
+
+grc-core {
+    display: block;
+    text-align: center;
+}
+
+.custom-title {
+    background-color: #2c3e50; 
+    color: white;
+    padding: 20px;
+    font-size: 28px;
+}
+
+.custom-controls {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.custom-control {
+    background-color: #6a9ad087;
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    width: 22%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: left;
+}
+
+.custom-subtitle {
+    border-bottom: 2px solid white;
+    padding-bottom: 15px;
+    font-size: 18px;
+}
+
+.custom-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.custom-list li {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .custom-controls {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .custom-control {
+        width: 90%;
+    }
+}
+
+
+
+
+.info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-top: 80px;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.info-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  box-shadow: 5px 8px 10px #151515;
+  margin-right: 3px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.info-row {
+  position: relative;
+  padding-bottom: 10px;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.info-row::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background-color: #ff4500;
+  transition: width 1.5s ease-in-out;
+}
+
+.info-row:hover {
+  transform: translateX(6px) scale(1.01); 
+}
+
+.info-row:hover::after {
+  width: 100%;
+}
+
+.info-number {
+  min-width: 50px;
+  min-height: 50px;
+  border-radius: 50%;
+  background-color: #66ccff;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-row img {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.info-content {
+  flex: 1;
+}
+
+.info-content h3 {
+  color: #66ccffbc;
+  font-size: 18px;
+  margin: 0 0 10px;
+  text-transform: uppercase;
+  text-align: start;
+}
+
+.info-content p {
+  color: #fff;
+  font-size: 14px;
+  margin: 0;
+  text-align: start;
+}
+
+@media (max-width: 768px) {
+  .info-row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .info-content {
+    margin-top: 10px;
+  }
+}
+
+
+
+
+.hero-section {
+  background: url('/iccs_website/images/cover\ 1.png') center center / cover no-repeat;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  color: white;
+  position: relative;
+  border-top: 4px solid;
+  border-bottom: 4px solid;
+}
+
+.text-orange {
+  color: #ff4500;
+  text-transform: lowercase;
+}
+
+.inner-hero {
+  background-color: rgba(0, 0, 0, 0.814); 
+  border: 1px solid rgba(255, 255, 255, 0.297);
+}
+
+.hero-section h1 {
+  text-shadow: 0 2px 5px rgba(0,0,0,0.6);
+}
+
+.hero-section h2 {
+    text-shadow: 0 2px 5px rgba(0,0,0,0.6);
+          color: #66ccff;
+}
+
+
+
+
+.ai-hype-section {
+  background-color: #283a49;
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.ai-hype-section .section-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  border-bottom: 3px solid #b0c4de;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.ai-hype-section .section-description {
+  max-width: 800px;
+  margin: 0 auto 50px;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.ai-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.ai-box {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.119);
+  padding: 30px 20px;
+  flex: 1 1 280px;
+  max-width: 320px;
+  text-align: center;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.ai-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.ai-icon {
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.ai-icon img {
+  height: 100%;
+  width: auto;
+}
+
+.ai-subheading {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.ai-box ul {
+  text-align: left;
+  list-style-type: disc;
+  padding-left: 20px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.ai-box ul ul {
+  list-style-type: circle;
+  margin-top: 5px;
+}
