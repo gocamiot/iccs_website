@@ -703,7 +703,6 @@ grc-core {
 
 
 
-
     .enquiry-section {
       display: flex;
       justify-content: center;
@@ -820,7 +819,8 @@ grc-core {
 
 
 
-    .site-footer {
+
+.site-footer {
   background-color: #0d1117;
   color: #ccc;
   text-align: center;
