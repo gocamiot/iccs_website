@@ -309,6 +309,12 @@ body, html {
   z-index: 2;
 }
 
+  /* Force show on mobile click */
+.spotlight-card.clicked p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Responsive tweaks */
 @media (max-width: 600px) {
   .spotlight-card {
@@ -324,11 +330,7 @@ body, html {
     font-size: 0.9rem;
   }
 
-  /* Force show on mobile click */
-.spotlight-card.clicked p {
-  opacity: 1;
-  transform: translateY(0);
-}
+
 }
 
 
