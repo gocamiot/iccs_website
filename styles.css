@@ -296,6 +296,36 @@ main {
 .prev { left: 0; }
 .next { right: 0; }
 
+@media (max-width: 768px) {
+  .leadership-slider .slider-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .leadership-slider .slide {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .leadership-slider .slide img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto 20px auto;
+  }
+
+  .leadership-slider .slide .info {
+    width: 100%;
+  }
+
+  .leadership-slider .nav {
+    display: none; 
+  }
+}
+
+
 
 
 
