@@ -462,7 +462,7 @@
 
                 </div>
                 <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
-                    <img class="rounded-lg-3" src="/iccs_website/images/AI 1.png" alt="" width="110%"
+                    <img class="rounded-lg-3" src="/iccs_website/images/griac.png" alt="" width="110%"
                         style="border-top-left-radius: 10px;">
                 </div>
             </div>
@@ -629,27 +629,33 @@
 
 
 
-    <section id="Contact" class="enquiry-section">
-        <div class="enquiry-text">
-            <strong>AUDIT AND DATA ENGINEERS EXCEL BY</strong>
-            AUTOMATING COMPLETE DATA ANALYSIS AT HIGH SPEEDS THROUGH MAKING STRUCTURED AND UNSTRUCTURED DATA SEARCHABLE
-        </div>
+<section id="Contact" class="enquiry-section">
+  <div class="enquiry-text">
+    <strong>AUDIT AND DATA ENGINEERS EXCEL BY</strong>
+    AUTOMATING COMPLETE DATA ANALYSIS AT HIGH SPEEDS THROUGH MAKING STRUCTURED AND UNSTRUCTURED DATA SEARCHABLE
+  </div>
 
-        <div class="enquiry-box">
-            <h2>Enquiries</h2>
-            <p>Please share your enquiry in the comment field</p>
-            <form>
-                <div class="form-grid">
-                    <input type="text" name="firstName" placeholder="First Name" required />
-                    <input type="text" name="lastName" placeholder="Last Name" required />
-                    <input type="tel" name="phone" placeholder="Phone" required />
-                    <input type="email" name="email" placeholder="E-mail" required />
-                    <textarea name="comment" placeholder="Comment / Enquiry" required></textarea>
-                </div>
-                <button type="submit">Send</button>
-            </form>
-        </div>
-    </section>
+  <div class="enquiry-box">
+    <h2>Enquiries</h2>
+    <p>Please share your enquiry in the comment field</p>
+
+    <form id="formspree-enquiry" action="https://formspree.io/f/manjeoen" method="POST">
+      <div class="form-grid">
+        <input type="text" name="First Name" placeholder="First Name" required />
+        <input type="text" name="Last Name" placeholder="Last Name" required />
+        <input type="tel" name="Phone" placeholder="Phone" required />
+        <input type="email" name="Email" placeholder="E-mail" required />
+        <textarea name="Comment / Enquiry" placeholder="Comment / Enquiry" required></textarea>
+      </div>
+      <button type="submit">Send</button>
+    </form>
+
+    <div id="thank-you-enquiry" style="display: none; color: #28a7bd; font-weight: bold; margin-top: 1.5rem;">
+      Thank you! Your enquiry has been received.
+    </div>
+  </div>
+</section>
+
 
 
 
@@ -687,6 +693,30 @@
           card.classList.toggle('clicked');
         });
       });
+    }
+  });
+
+
+
+  const enquiryForm = document.getElementById('formspree-enquiry');
+  const thankYouEnquiry = document.getElementById('thank-you-enquiry');
+
+  enquiryForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(enquiryForm);
+    const response = await fetch(enquiryForm.action, {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      enquiryForm.reset();
+      enquiryForm.style.display = 'none';
+      thankYouEnquiry.style.display = 'block';
+    } else {
+      alert('Something went wrong. Please try again later.');
     }
   });
 </script>
