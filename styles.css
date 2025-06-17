@@ -185,14 +185,18 @@ main {
 }
 
 .principles h4 {
-  color: #174787;
+  color: #0f4b9a;
   margin-bottom: 10px;
+  padding: 5px;
 }
 
 .principles p {
   font-size: 0.9rem;
   color: white;
   line-height: 1.5;
+  background-color: #08162f36;
+  padding: 10px;
+  border-radius: 20px;
 }
 
 
