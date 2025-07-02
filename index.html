@@ -290,7 +290,7 @@
       <p><i class="icon">📞</i> 011 794 2636</p>
       <p><i class="icon">✉️</i> Admin@iccs.co.za</p>
       <p><i class="icon">📍</i> Find us at~</p>
-      <p><a href="https://www.google.com/maps?q=Block+C,+FutureSpace,+Nicol-on-Main+Office+Park,+2+Bruton+Rd,+Bryanston,+Johannesburg" target="_blank" rel="noopener noreferrer" style="color: white; text-underline-offset: 3px; text-decoration-color: #000000; background-color: #234569a8; padding: 5px; border-radius: 5px;">
+      <p><a href="https://www.google.com/maps?q=Block+C,+FutureSpace,+Nicol-on-Main+Office+Park,+2+Bruton+Rd,+Bryanston,+Johannesburg" target="_blank" rel="noopener noreferrer" style="color: white; text-underline-offset: 3px; text-decoration-color: #000000; background-color: #082543a8; padding: 10px; border-radius: 3px;">
 Block C <br>
 FutureSpace <br>
 Nicol-on-Main Office Park <br>
@@ -333,6 +333,7 @@ Nicol-on-Main Office Park <br>
     <div class="footer-documents">
       <a href="/iccs_website/files/Privacy Policy ICCS.docx" download class="footer-doc">ICCS - Privacy Policy</a>
       <a href="/iccs_website/files/ICCS TERMS & CONDITIONS.docx" download class="footer-doc">ICCS - Terms & Conditions</a>
+      <a href="/iccs_website/files/ICCS Cookie Policy.docx" download class="footer-doc">ICCS - Cookie Policy</a>
     </div>
 
     <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" class="back-to-top">
@@ -341,6 +342,17 @@ Nicol-on-Main Office Park <br>
   </div>
 </footer>
 
+
+
+<div id="cookie-consent" class="cookie-consent">
+  <div class="cookie-consent-box">
+    <p>We use cookies to ensure you get the best experience on our website.</p>
+    <div class="cookie-consent-buttons">
+      <button onclick="acceptCookies()">Accept</button>
+      <button onclick="denyCookies()">Deny</button>
+    </div>
+  </div>
+</div>
 
 
 
@@ -379,6 +391,7 @@ Nicol-on-Main Office Park <br>
 
 
 
+
   const form = document.getElementById('contact-form');
   const thankYouMessage = document.getElementById('thank-you-message');
 
@@ -402,6 +415,25 @@ Nicol-on-Main Office Park <br>
       alert('Oops! Something went wrong. Please try again later.');
     }
   });
+
+
+  
+
+  document.addEventListener("DOMContentLoaded", function () {
+    if (!localStorage.getItem("cookieConsent")) {
+      document.getElementById("cookie-consent").style.display = "block";
+    }
+  });
+
+  function acceptCookies() {
+    localStorage.setItem("cookieConsent", "accepted");
+    document.getElementById("cookie-consent").style.display = "none";
+  }
+
+  function denyCookies() {
+    localStorage.setItem("cookieConsent", "denied");
+    document.getElementById("cookie-consent").style.display = "none";
+  }
 </script>
 
 

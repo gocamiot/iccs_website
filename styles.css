@@ -636,7 +636,9 @@ main {
 .inquiry-container {
   width: 90%;
   margin: 0 auto;
-  background-image: url('https://bing.com/th/id/BCO.977ebe89-a7b0-4b76-95e8-f64b641b85ee.png');
+  background-image: url('https://images5.alphacoders.com/853/853486.jpg');
+  background-position: center;
+  background-size: cover;
   border: 2px solid rgba(248, 119, 6, 0.516);
   display: flex;
   border-radius: 8px;
@@ -815,6 +817,58 @@ main {
 
 .back-to-top .arrow {
   font-size: 1.2rem;
+}
+
+
+
+.cookie-consent {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #1c2128;
+  color: #ccc;
+  text-align: center;
+  padding: 1rem;
+  box-shadow: 0 -2px 10px rgba(0, 200, 255, 0.1);
+  z-index: 9999;
+  display: none;
+}
+
+.cookie-consent-box {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.cookie-consent-buttons {
+  margin-top: 0.5rem;
+}
+
+.cookie-consent-buttons button {
+  margin: 0 0.5rem;
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cookie-consent-buttons button:first-child {
+  background-color: #00c8ff;
+  color: #000;
+}
+
+.cookie-consent-buttons button:first-child:hover {
+  background-color: #00aee0;
+}
+
+.cookie-consent-buttons button:last-child {
+  background-color: #30363d;
+  color: #fff;
+}
+
+.cookie-consent-buttons button:last-child:hover {
+  background-color: #444c56;
 }
 
 
